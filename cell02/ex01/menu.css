@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    background-color: aliceblue;
+    justify-content: center;
+    padding: 20px;
+}
+div {
+    width: 150px;
+    height: 150px;
+    border: 1px solid gray;
+    background-color: blueviolet;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5%;
+}
