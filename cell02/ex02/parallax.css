@@ -1,0 +1,24 @@
+body { 
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+}
+.imgg { 
+    display: flex;
+    height: 1024px;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    font-size: 10px;
+    color: white;
+}
+.bb { 
+    height: 480px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
