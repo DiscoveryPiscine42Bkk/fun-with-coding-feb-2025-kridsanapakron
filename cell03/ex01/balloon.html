@@ -9,6 +9,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
         }
         div {
             width: 200px;
@@ -27,7 +28,6 @@
         let direction = 1;
         const dcircle = document.getElementById("Here");
         function changecolor() {
-            console.log(i, direction, h);
             i++;
             h += direction * 10;
             if (h >= 420) {
@@ -36,7 +36,6 @@
             else if (h <= 200) {
                 direction = 1;
             }
-            console.log(i, direction, h);
             dcircle.style.backgroundColor = colors[i % 3];
             dcircle.style.width = h + "px";
             dcircle.style.height = h + "px";
@@ -44,9 +43,12 @@
         function down() {
             if (h > 200) {
                 h -= 5;
+                i--;
                 dcircle.style.width = h + "px";
                 dcircle.style.height = h + "px";
+                dcircle.style.backgroundColor = colors[i % 3];
             }
+            
         }
     </script>
 </body>
