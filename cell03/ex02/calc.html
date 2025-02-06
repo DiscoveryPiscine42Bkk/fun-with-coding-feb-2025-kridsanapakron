@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            background-color: aliceblue;
+        }
+
+        .mainPage {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            border: 1px solid slategray;
+            border-radius: 10%;
+            padding: 10px;
+            background-color: whitesmoke;
+        }
+        select {
+            text-align: center;
+        }
+        input {
+            text-align: center;
+        }
+        button {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainPage">
+        <H1>Calculator</H1>
+        <input type="text" id="left">
+        <select id="operator">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+            <option value="5">%</option>
+        </select>
+        <input type="text" id="right">
+        <button type="submit" id="bt" onclick="calculate()">Try Me!</button>
+    </div>
+    <script>
+        const p1 = document.getElementById("left");
+        const p2 = document.getElementById("right");
+        const k = document.getElementById("operator");
+        function calculate() {
+            let num1 = parseInt(p1.value);
+            let num2 = parseInt(p2.value);
+            let operator = k.value;
+            let total = 0;
+            if (operator == "4" || operator == "5") {
+                if (num2 == 0) {
+                    console.log("It’s over 9000!");
+                    alert("It’s over 9000!");
+                    return;
+                }
+            }
+            if (!(Number.isInteger(num1) && num1 >= 0 && Number.isInteger(num2) && num2 >= 0)) {
+                console.log("Error :(");
+                alert("Error :(");
+                return;
+            }
+            switch (operator) {
+                case "1":
+                    total = num1 + num2;
+                    break;
+                case "2":
+                    total = num1 - num2;
+                    break;
+                case "3":
+                    total = num1 * num2;
+                    break;
+                case "4":
+                    total = num1 / num2;
+                    break;
+                case "5":
+                    total = num1 % num2;
+                    break;
+            }
+            console.log(total);
+            alert(total);
+        }
+        function useme() {
+            alert("Please, use me...");
+        }
+        setInterval(useme, 30000);
+    </script>
+</body>
+
+</html>
