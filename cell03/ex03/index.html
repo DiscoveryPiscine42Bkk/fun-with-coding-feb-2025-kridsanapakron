@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 50vh;
+            background-color: aliceblue;
+        }
+        .mainPage {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid gray;
+            border-radius: 10%;
+            padding: 10px;
+            background-color:beige;
+            text-align: center;
+        }
+        button {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainPage">
+        <h1>TO DO LIST</h1>
+        <div id="ft_list"></div>
+        <br>
+        <button onclick="newBT()">New</button>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>
