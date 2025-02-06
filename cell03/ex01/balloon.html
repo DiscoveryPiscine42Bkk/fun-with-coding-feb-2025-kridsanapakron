@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="Here" onclick="changecolor()" onmouseleave="down()"></div>
+    <script>
+        let colors = ["red", "green", "blue"];
+        let i = 0;
+        let h = 200;
+        let direction = 1;
+        const dcircle = document.getElementById("Here");
+        function changecolor() {
+            console.log(i, direction, h);
+            i++;
+            h += direction * 10;
+            if (h >= 420) {
+                direction = -1;
+            } 
+            else if (h <= 200) {
+                direction = 1;
+            }
+            console.log(i, direction, h);
+            dcircle.style.backgroundColor = colors[i % 3];
+            dcircle.style.width = h + "px";
+            dcircle.style.height = h + "px";
+        }
+        function down() {
+            if (h > 200) {
+                h -= 5;
+                dcircle.style.width = h + "px";
+                dcircle.style.height = h + "px";
+            }
+        }
+    </script>
+</body>
+</html>
