@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.mainp {
+    background-color: white;
+    box-shadow: 0 2px 5px  grey;
+    width: 300px;
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#gimg {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    margin-bottom: 10px;
+}
+#gimg img {
+    width: 10%;
+}
+button {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
