@@ -25,16 +25,16 @@
         let colors = ["red", "green", "blue"];
         let i = 0;
         let h = 200;
-        let direction = 1;
+        let j = 1;
         const dcircle = document.getElementById("Here");
         function changecolor() {
             i++;
-            h += direction * 10;
+            h += j * 10;
             if (h >= 420) {
-                direction = -1;
+                j = -1;
             } 
             else if (h <= 200) {
-                direction = 1;
+                j = 1;
             }
             dcircle.style.backgroundColor = colors[i % 3];
             dcircle.style.width = h + "px";
